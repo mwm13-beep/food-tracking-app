@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { API } from '../apiConfig';
 
 export function LogEntry() {
   const [food, setFood] = useState('');
@@ -15,7 +16,7 @@ export function LogEntry() {
     };
   
     try {
-      const response = await fetch('http://127.0.0.1:8000/log', {
+      const response = await fetch(API.log, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

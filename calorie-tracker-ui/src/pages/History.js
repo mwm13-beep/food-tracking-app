@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { API } from '../apiConfig';
 
 export function History() {
   const [history, setHistory] = useState([]);
@@ -6,7 +7,7 @@ export function History() {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/history');
+        const response = await fetch(API.history);
         if (!response.ok) {
           throw new Error('Failed to fetch history');
         }

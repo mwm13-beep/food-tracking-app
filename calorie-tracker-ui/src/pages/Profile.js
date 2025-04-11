@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { API } from '../apiConfig';
 
 export function Profile() {
   const [profile, setProfile] = useState({
@@ -27,7 +28,7 @@ export function Profile() {
     };
   
     try {
-      const response = await fetch('http://127.0.0.1:8000/profile', {
+      const response = await fetch(API.profile, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { API } from '../apiConfig';
 
 export function Dashboard() {
     const [dashboard, setDashboard] = useState([]);
@@ -21,7 +22,7 @@ export function Dashboard() {
     useEffect(() => {
     const fetchDashboard = async () => {
         try {
-            const response = await fetch('http://127.0.0.1:8000/dashboard');
+            const response = await fetch(API.dashboard);
             if (!response.ok) {
                 throw new Error('Failed to fetch dashboard');
             }
