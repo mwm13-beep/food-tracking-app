@@ -1,0 +1,11 @@
+# Python backend
+calorie-tracker-backend/venv/
+__pycache__/
+
+# Node frontend
+calorie-tracker-ui/node_modules/
+calorie-tracker-ui/.env
+
+# System
+.DS_Store
+.env
